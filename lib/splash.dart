@@ -21,7 +21,7 @@ class Splash extends StatelessWidget {
             children: [
               Container(
                 width: 120,
-                height: 120,
+                height: 80,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.white, width: 4),
