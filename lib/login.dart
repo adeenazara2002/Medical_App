@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:medicalapp/walk_through.dart';
 
-// import 'package:flutter/material.dart';
-
-class Splash extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(65, 87, 255, 1),
+      backgroundColor: Colors.white,
       body: Center(
         child: GestureDetector(
           onTap: () {
@@ -26,6 +24,14 @@ class Splash extends StatelessWidget {
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.white, width: 4),
                   color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 4,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
                 ),
                 child: Center(
                   child: Icon(
@@ -41,7 +47,7 @@ class Splash extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontStyle: FontStyle.italic,
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -52,8 +58,5 @@ class Splash extends StatelessWidget {
     );
   }
 }
-
-
-
 
 

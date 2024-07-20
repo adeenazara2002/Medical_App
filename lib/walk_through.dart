@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicalapp/login.dart';
 
 class WalkThrough extends StatelessWidget {
   @override
@@ -71,7 +72,7 @@ class WalkThrough extends StatelessWidget {
                 Icon(Icons.circle, color: Colors.grey, size: 7),
               ],
             ),
-            label: '', // No label
+            label: '', 
           ),
           BottomNavigationBarItem(
             icon: SizedBox.shrink(),
@@ -82,6 +83,14 @@ class WalkThrough extends StatelessWidget {
         ],
             selectedItemColor: Colors.grey,
             unselectedItemColor: Color.fromRGBO(65, 87, 255, 1),
+             onTap: (index) {
+          if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Login()),
+            );
+          }
+        },
       ),
     );
   }
