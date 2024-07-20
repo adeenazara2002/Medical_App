@@ -9,7 +9,7 @@ class WalkThrough extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('./assets/images/walk_through.jpg'),
+            Image.asset('./assets/images/walk.jpeg'),
             SizedBox(height: 20),
             Text(
               'View and buy',
@@ -52,18 +52,36 @@ class WalkThrough extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: SizedBox.shrink(),
+            label: 'Skip',
+            // backgroundColor: Colors.pink
+            
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 20,),
+                Icon(Icons.circle, color: Colors.blue, size: 7),
+                SizedBox(width: 5),
+                Icon(Icons.circle, color: Colors.grey, size: 7),
+                SizedBox(width: 5),
+                Icon(Icons.circle, color: Colors.grey, size: 7),
+                SizedBox(width: 5),
+                Icon(Icons.circle, color: Colors.grey, size: 7),
+              ],
+            ),
+            label: '', // No label
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: SizedBox.shrink(),
+            
+            label: 'Next',
+            
           ),
         ],
+            selectedItemColor: Colors.grey,
+            unselectedItemColor: Color.fromRGBO(65, 87, 255, 1),
       ),
     );
   }
